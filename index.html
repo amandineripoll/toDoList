@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>My First PWA</title>
+  <title>To Do List</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <style>
     * {
@@ -83,7 +83,7 @@
     background-position: -19px 0;
     }
     header a span {
-    background-image: url("add.png") no-repeat;
+    background: url("add.png") no-repeat;
     display: block;
     width: 19px;
     height: 20px;
@@ -157,12 +157,17 @@
         </a>
     </header>
     <main>
-        <ul>
+        <ul id="ul">
 
         </ul>
     </main>
   </section>
   <script type="module" src="/js/app.js" async></script>
   <script src="/js/todo.js"></script>
+  <script nomodule>
+      const script = document.createElement('script');
+      script.src = '/js/app.js';
+      document.head.appendChild(script);
+    </script>
 </body>
 </html>
