@@ -23,13 +23,13 @@ import AppTodos from '/js/components/todos.js';
         }
 
         const lines = await database.get('line', 'line');
-        fetch('http://localhost:3333/list', {
+        document.getElementById("link").addEventListener("click",fetch('http://localhost:3333/list', {
             headers: {
               'Content-Type': 'application/json'
             },
             method: "POST",
             body: JSON.stringify(data)
-        })
+        }))
 
         const todos = json.map(item => {
             const todosElement = new AppTodos();
